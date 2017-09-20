@@ -2,3 +2,7 @@
 
 - [1. gyakorlat](01/README.md)
 - [2. gyakorlat](02/README.md)
+
+# Segédanyagok
+
+- [Git segédlet](others/git.md)
