@@ -1,4 +1,4 @@
-# 2. gyakorlat: Szerveroldali Java
+# 2. gyakorlat: Szerveroldali Java: bevezetés, vezérlők, sablonok, modellek
 
 
 ## Some theory
@@ -351,7 +351,7 @@ public class Student {
 
 The [`@Data` annotation](https://projectlombok.org/features/Data) comes from the Lombok library, and it helps reducing the boilerplate code by autogenerating the setter, getters and constructors.
 
-If we run the application at this point, we can see in the h2 web console in the browser under `http://localhost:8080/h2`, that a Student table was created based on the informations of the entity class. If we gave an `import.sql`, then there should be some data in it:
+If we run the application at this point, we can see in the h2 web console in the browser under `http://localhost:8080/h2`, that a Student table was created based on the informations of the entity class. If we gave an `src/main/resources/import.sql`, then there should be some data in the table:
 
 ```sql
 insert into student (first_name, last_name, neptun) values ('John', 'Wick', 'abcdef1');
