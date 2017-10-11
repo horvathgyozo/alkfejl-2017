@@ -12,8 +12,6 @@
 - böngésző (JavaScript)
 - parancssor, Node.js (JavaScript)
 - REPL: [TypeScript Playground]
-- REPL: [JSBin][jsbin]
-- REPL: [ES6 console]
 
 ## Szerkesztő
 
@@ -36,6 +34,9 @@ npm install nodemon
 # console 2
 ./node_modules/.bin/nodemon file.js
 ```
+
+Vagy mindezt előkészítve használhatjuk [ezt a kódtárat](https://github.com/vimtaai/typescript-repl) letöltve.
+
 
 ## Feladatok
 
