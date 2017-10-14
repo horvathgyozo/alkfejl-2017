@@ -120,3 +120,9 @@ This is a fourth line I am adding
 Végezzük el a változtatások összeolvasztását (lsd. előző fejezet a commit létrehozásáig). Ha a változtatásokat add-oltuk (fontos, hogy ne commitoljunk),
 akkor a ```git rebase --continue``` parancs kiadásával folytathatjuk a rebase-t. Ekkor újabb conflictok tűnhetnek fel. Iteráljunk addig, ameddig conflictok
 vannak. Ha már nincsenek, akkor a változtatásaink készen állnak a push-ra. Remélhetőleg itt sem jelentek meg újabb commitok a távoli repoban.
+
+## Hivatkozások
+
+- [Git guide](http://rogerdudler.github.io/git-guide/)
+- [Pro Git book](https://git-scm.com/book/en/v2/)
+- [Munkafolyamatok](https://www.atlassian.com/git/tutorials/comparing-workflows)
