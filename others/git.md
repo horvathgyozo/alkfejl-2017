@@ -123,6 +123,7 @@ vannak. Ha már nincsenek, akkor a változtatásaink készen állnak a push-ra. 
 
 ## Hivatkozások
 
+- [Try git](https://try.github.io/)
 - [Git guide](http://rogerdudler.github.io/git-guide/)
 - [Pro Git book](https://git-scm.com/book/en/v2/)
 - [Munkafolyamatok](https://www.atlassian.com/git/tutorials/comparing-workflows)
