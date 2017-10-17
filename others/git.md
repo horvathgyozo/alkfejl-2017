@@ -121,9 +121,198 @@ Végezzük el a változtatások összeolvasztását (lsd. előző fejezet a comm
 akkor a ```git rebase --continue``` parancs kiadásával folytathatjuk a rebase-t. Ekkor újabb conflictok tűnhetnek fel. Iteráljunk addig, ameddig conflictok
 vannak. Ha már nincsenek, akkor a változtatásaink készen állnak a push-ra. Remélhetőleg itt sem jelentek meg újabb commitok a távoli repoban.
 
+
 ## Hivatkozások
 
 - [Try git](https://try.github.io/)
 - [Git guide](http://rogerdudler.github.io/git-guide/)
 - [Pro Git book](https://git-scm.com/book/en/v2/)
 - [Munkafolyamatok](https://www.atlassian.com/git/tutorials/comparing-workflows)
+
+
+## Közös munkafolyamat git-ben (példa)
+
+Alfa és Béta közös munkája, rebase alapon.
+
+<table>
+<tr>
+<th>Alfa</th>
+<th>Béta</th>
+</tr>
+
+<!---------------------------------- Új sor ------------------------------------->
+<tr><td><!-- Alfa -->
+
+- Új repo létrehozása a Github-on
+- [Create a new repository](https://github.com/new)
+- Adjunk nevet a repo-nak
+- `Create repository`
+- Béta felvétele (Settings/Collaborators/Add collaborator)
+
+</td><td><!-- Béta -->
+
+
+
+</td></tr>
+<!-- Sor vége -->
+
+<!---------------------------------- Új sor ------------------------------------->
+<tr><td><!-- Alfa -->
+
+- `git clone https://github.com/<alfa>/<repo>.git repo-alfa`
+- `cd repo-alfa`
+- `fruits.txt` fájl szerkesztése
+
+```txt
+alma
+körte
+```
+
+- `git status`
+- `git add fruits.txt`
+- `git commit -m"Initial commit"`
+- Harmadik sor hozzáadása a `fruits.txt`-ben
+
+```txt
+alma
+körte
+szilva
+```
+
+- `git status`
+- `git add fruits.txt`
+- `git commit -m"szilva hozzáadva"`
+- `git remote -v`
+- `git push -u origin master`
+- Github oldal frissítése
+
+</td><td><!-- Béta -->
+
+
+
+</td></tr>
+<!-- Sor vége -->
+
+<!---------------------------------- Új sor ------------------------------------->
+<tr><td><!-- Alfa -->
+
+
+
+</td><td><!-- Béta -->
+
+- `git clone https://github.com/<alfa>/<repo>.git repo-beta`
+- `cd repo-beta`
+- Könyvtár listázása
+- `fruits.txt` szerkesztése
+
+```txt
+alma
+körte
+szilva
+barack
+```
+
+- Új fájl hozzáadása: `vegetables.txt`
+
+```txt
+répa
+krumpli
+```
+
+- `git status`
+- `git add .`
+- `git commit -m"barack és zöldségek hozzáadása"`
+- `git push -u origin master`
+
+</td></tr>
+<!-- Sor vége -->
+
+<!---------------------------------- Új sor ------------------------------------->
+<tr><td><!-- Alfa -->
+
+- Repo frissítése
+- `git pull --rebase origin master`
+
+</td><td><!-- Béta -->
+
+
+
+</td></tr>
+<!-- Sor vége -->
+
+
+<!---------------------------------- Új sor ------------------------------------->
+<tr><td><!-- Alfa -->
+
+- `fruits.txt` fájl 3. sorának szerkesztése
+- `git add fruits.txt`
+- `git commit -m"alfa 1. módosítás"`
+- `fruits.txt` fájl 3. sorának szerkesztése
+- `git add fruits.txt`
+- `git commit -m"alfa 2. módosítás"`
+
+</td><td><!-- Béta -->
+
+- `fruits.txt` fájl 3. sorának szerkesztése
+- `git add fruits.txt`
+- `git commit -m"béta 1. módosítás"`
+- `fruits.txt` fájl 3. sorának szerkesztése
+- `git add fruits.txt`
+- `git commit -m"béta 2. módosítás"`
+
+</td></tr>
+<!-- Sor vége -->
+
+<!---------------------------------- Új sor ------------------------------------->
+<tr><td><!-- Alfa -->
+
+- `git push`
+- OK
+
+</td><td><!-- Béta -->
+
+
+
+</td></tr>
+<!-- Sor vége -->
+
+<!---------------------------------- Új sor ------------------------------------->
+<tr><td><!-- Alfa -->
+
+
+
+</td><td><!-- Béta -->
+
+- `git push`
+- Rejected, mivel az origin előrébb van
+- `git pull --rebase`
+- Conflict 1.
+- `git status`
+- Konfliktus feloldása (VSCode segít, de gyakorlatilag a fájl szerkesztése)
+- `git add fruits.txt`
+- `git status`
+- `git rebase --continue`
+- Conflict 2.
+- `git status`
+- Konfliktus feloldása
+- `git add fruits.txt`
+- `git status`
+- `git rebase --continue`
+- `git push`
+
+</td></tr>
+<!-- Sor vége -->
+
+<!---------------------------------- Új sor ------------------------------------->
+<tr><td><!-- Alfa -->
+
+- `git pull --rebase`
+
+</td><td><!-- Béta -->
+
+
+
+</td></tr>
+<!-- Sor vége -->
+ 
+</table>
