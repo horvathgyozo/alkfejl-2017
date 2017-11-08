@@ -6,6 +6,7 @@
 - [4. gyakorlat: Szerveroldali Java: REST API, jogosultságvizsgálat](04/README.md)
 - 5\. gyakorlat: [TypeScript](05/README.md) és [git](others/git.md)
 - [6. gyakorlat: Angular: telepítés, HTML generálás, komponensek, stílusok](06/README.md)
+- [7. gyakorlat: Angular: dinamikus adatok, komponensek kapcsolata, űrlapkezelés, service-ek](07/README.md)
 
 # Segédanyagok
 
