@@ -11,3 +11,4 @@
 # Segédanyagok
 
 - [Git segédlet](others/git.md)
+- [Aszinkronitás kezelése JavaScriptben](others/async.md)
