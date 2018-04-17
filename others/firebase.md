@@ -389,3 +389,10 @@ var initApp = function() {
 
 window.addEventListener('load', initApp);
 ```
+
+
+## Firebase and React
+
+- [Firebase and React](https://github.com/firebase/reactfire#using-the-firebase-js-sdk-in-react)
+- [FirebaseUI authentication and React](https://github.com/firebase/firebaseui-web-react)
+- [An article on Firebase authentication and React](https://css-tricks.com/firebase-react-part-2-user-authentication/)
